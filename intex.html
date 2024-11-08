@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora img</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="modificando">
+    <nav class="h1">Calculadora IMC</nav>
+
+        
+
+
+    <h1>Indice de massa corporal</h1>
+
+
+    <form action="#">
+        <label for="altura">Altura:</label>
+        <input type="number" name="altura" id="altura">
+
+        <label for="peso">Peso(Kg):</label>
+        <input type="number" name="peso" id="peso">
+
+
+
+    </form>
+    <button onclick="calculando()">Calculadora</button>
+    <p>Seu Indice de massa corporal é: <span id="resultado"></span></p>
+
+
+    
+    <script>
+        function calculando() {
+            const altura = parseFloat(document.getElementById("altura").value);
+            const peso = parseFloat(document.getElementById("peso").value);
+
+
+
+            const resultado = peso / (altura ** 2);
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+
+
+           
+        }
+    </script>
+    <footer>&copy;Todos os direitos reservados</footer>
+
+</body>
+
+</html>
